@@ -18,7 +18,7 @@
 // Base command class
 // If inSleep>0 it will cause the commands to hold
 // for that period of time. If inSleep<=0 it will
-// call the doCOmmand() method. Simple simple.
+// call the doCommand() method. Simple simple.
 // **************************************************
 
 

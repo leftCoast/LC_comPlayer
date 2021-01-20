@@ -35,7 +35,7 @@ comPlayer::comPlayer(void)
    timeObj() { mRepeat = false; }
 
 
-// Destructor. We don't allocate anything ourselves that isn't already dealt with so
+// Destructor. We don't allocate anything ourselves that isn't already dealt with. So,
 // nothing to do here.  
 comPlayer::~comPlayer(void) {  }
 
@@ -62,8 +62,8 @@ void comPlayer::addCom(comObj* aCom) {
 void comPlayer::repeat(bool trueFalse) { mRepeat = trueFalse; }
 
 
-// Every is done in idle time. This is the "engine" of the command player. Automatically
-// called in the idle loop.
+// Everything is done in idle time. This is the "engine" of the command player.
+//Automatically called in the idle loop.
 void comPlayer::idle(void) {
 
    comObj* nextCom;
