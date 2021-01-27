@@ -32,7 +32,10 @@ void comObj::doCommand(void) { }
 comPlayer::comPlayer(void)
    : queue(),
    idler(),
-   timeObj() { mRepeat = false; }
+   timeObj() {
+   
+   mRepeat = false;
+}
 
 
 // Destructor. We don't allocate anything ourselves that isn't already dealt with. So,
@@ -63,7 +66,7 @@ void comPlayer::repeat(bool trueFalse) { mRepeat = trueFalse; }
 
 
 // Everything is done in idle time. This is the "engine" of the command player.
-//Automatically called in the idle loop.
+// Automatically called in the idle loop.
 void comPlayer::idle(void) {
 
    comObj* nextCom;
@@ -77,6 +80,8 @@ void comPlayer::idle(void) {
       }
       if (mRepeat) {
          push(nextCom);
+      } else {
+      	delete(nextCom);
       }
    }
 }
